@@ -19,28 +19,28 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
                   <li class="nav-item active">
-                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="/tickets">Tickets</a>
+                      <a class="nav-link" href="{{ route('tickets.index') }}">Tickets</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="/notes">Notes</a>
+                      <a class="nav-link" href="{{ route('notes.index') }}">Notes</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="/users">Users</a>
+                      <a class="nav-link" href="{{ route('users.index') }}">Users</a>
                   </li>
                   <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           More
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="/addresses">Addresses</a>
-                          <a class="dropdown-item" href="/companies">Companies</a>
-                          <a class="dropdown-item" href="/contracts">Contracts</a>
-                          <a class="dropdown-item" href="/devices">Devices</a>
-                          <a class="dropdown-item" href="/groups">Groups</a>
-                          <a class="dropdown-item" href="/roles">Roles</a>
+                          <a class="dropdown-item" href="{{ route('addresses.index') }}">Addresses</a>
+                          <a class="dropdown-item" href="{{ route('companies.index') }}">Companies</a>
+                          <a class="dropdown-item" href="{{ route('contracts.index') }}">Contracts</a>
+                          <a class="dropdown-item" href="{{ route('devices.index') }}">Devices</a>
+                          <a class="dropdown-item" href="{{ route('groups.index') }}">Groups</a>
+                          <a class="dropdown-item" href="{{ route('roles.index') }}">Roles</a>
                       </div>
                   </li>
               </ul>
