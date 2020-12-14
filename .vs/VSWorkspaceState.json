@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\tickets",
+    "\\resources\\views\\users"
+  ],
+  "SelectedNode": "\\app\\Http\\Controllers\\AddressControler.php",
+  "PreviewInSolutionExplorer": false
+}
