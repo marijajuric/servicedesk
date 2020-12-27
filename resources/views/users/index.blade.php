@@ -2,6 +2,8 @@
 
 @section('content')
 
+<a href="{{ route('users.create') }}" class="btn btn-primary mt-5">Add</a>
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -24,6 +26,10 @@
             <td>{{ $user->password}}</td>
             <td>{{ $user->phone_number}}</td>
             <td>{{ $user->created_at}}</td>
+            <td>
+                <a class="btn btn-outline-secondary" href="{{ route('users.show', ['user'=> $user->id])}}"> Details</a>
+                <a class="btn btn-outline-secondary" href="{{ route('users.edit', ['user'=> $user->id])}}"> Edit</a>
+            </td>
         </tr>
         @foreach
     </tbody>

@@ -2,6 +2,8 @@
 
 @section('content')
 
+<a href="{{ route('tickets.create') }}" class="btn btn-primary mt-5">Add</a>
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -11,6 +13,7 @@
             <th scope="col">Created at</th>
             <th scope="col">Status</th>
             <th scope="col">Time units</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +25,11 @@
             <td>{{ $ticket->created_at}}</td>
             <td>{{ $ticket->status}}</td>
             <td>{{ $ticket->time_units}}</td>
+             <td>
+                <a class="btn btn-outline-secondary" href="{{ route('tickets.show', ['ticket'=> $ticket->id])}}"> Details</a>
+                <a class="btn btn-outline-secondary" href="{{ route('tickets.edit', ['ticket'=> $ticket->id])}}"> Edit</a>
+            </td>
+
         </tr>
         @foreach
     </tbody>
