@@ -4,15 +4,14 @@
     "\\app",
     "\\app\\Http",
     "\\app\\Http\\Controllers",
-    "\\database",
+    "\\app\\Models",
     "\\database\\seeds",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\layouts",
-    "\\resources\\views\\tickets",
-    "\\resources\\views\\users",
-    "\\routes"
+    "\\resources\\views\\addresses",
+    "\\resources\\views\\roles",
+    "\\resources\\views\\tickets"
   ],
-  "SelectedNode": "\\app\\Http\\Controllers\\AddressControler.php",
+  "SelectedNode": "\\resources\\views\\roles\\index.blade.php",
   "PreviewInSolutionExplorer": false
 }
