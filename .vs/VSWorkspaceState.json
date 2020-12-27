@@ -4,10 +4,14 @@
     "\\app",
     "\\app\\Http",
     "\\app\\Http\\Controllers",
+    "\\database",
+    "\\database\\seeds",
     "\\resources",
     "\\resources\\views",
+    "\\resources\\views\\layouts",
     "\\resources\\views\\tickets",
-    "\\resources\\views\\users"
+    "\\resources\\views\\users",
+    "\\routes"
   ],
   "SelectedNode": "\\app\\Http\\Controllers\\AddressControler.php",
   "PreviewInSolutionExplorer": false

@@ -2,16 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\AddressControler;
-use App\Http\Controllers\CompanyControler;
-use App\Http\Controllers\ContractControler;
-use App\Http\Controllers\DeviceControler;
-use App\Http\Controllers\GroupControler;
-use App\Http\Controllers\NoteControler;
-use App\Http\Controllers\RoleControler;
-use App\Http\Controllers\ServiceControler;
-use App\Http\Controllers\TicketControler;
-use App\Http\Controllers\UserControler;
+use App\Http\Controllers\AddressController;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\ContractController;
+use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\GroupController;
+use App\Http\Controllers\NoteController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TicketController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -31,14 +31,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('addresses', AddressControler::class);
-Route::resource('companies', CompanyControler::class);
-Route::resource('contracts', ContractControler::class);
-Route::resource('devices', DeviceControler::class);
-Route::resource('groups', GroupControler::class);
-Route::resource('notes', NoteControler::class);
-Route::resource('roles', RoleControler::class);
-Route::resource('services', ServiceControler::class);
-Route::resource('tickets', TicketControler::class);
-Route::resource('users', UserControler::class);
+Route::resource('addresses', AddressController::class);
+Route::resource('companies', CompanyController::class);
+Route::resource('contracts', ContractController::class);
+Route::resource('devices', DeviceController::class);
+Route::resource('groups', GroupController::class);
+Route::resource('notes', NoteController::class);
+Route::resource('roles', RoleController::class);
+Route::resource('services', ServiceController::class);
+Route::resource('tickets', TicketController::class);
+Route::resource('users', UserController::class);
 
