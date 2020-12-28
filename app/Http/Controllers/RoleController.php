@@ -47,7 +47,8 @@ class RoleControler extends Controller
      */
     public function show($id)
     {
-        //
+        $roles=Role::findOrFail();
+        return view ('roles.show', compact('role'));
     }
 
     /**

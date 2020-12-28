@@ -47,7 +47,8 @@ class DeviceControler extends Controller
      */
     public function show($id)
     {
-        //
+        $devices=Device::findOrFail();
+        return view ('devices.show', compact('device'));
     }
 
     /**

@@ -48,7 +48,8 @@ class UserControler extends Controller
      */
     public function show($id)
     {
-        //
+        $users=User::findOrFail();
+        return view ('users.show', compact('user'));
     }
 
     /**

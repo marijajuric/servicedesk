@@ -48,7 +48,8 @@ class AddressControler extends Controller
      */
     public function show($id)
     {
-        //
+        $addresses=Address::findOrFail();
+        return view ('addresses.show', compact('address'));
     }
 
     /**

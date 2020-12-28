@@ -47,7 +47,8 @@ class GroupControler extends Controller
      */
     public function show($id)
     {
-        //
+        $groups=Group::findOrFail();
+        return view ('groups.show', compact('group'));
     }
 
     /**
