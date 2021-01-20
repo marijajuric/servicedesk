@@ -26,7 +26,7 @@ class UserControler extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -37,7 +37,16 @@ class UserControler extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /* validacija podataka: ime mora biti manje od 255 znakova, biti unique, itd. */
+        $validated = $request->validate([
+            'first_name' => 'required|unique:users|max:50',
+            'last_name' => 'required|unique:users|max:50',
+            'email' => 'required|unique:users|max:255',
+            'password' => 'required|unique:users|max:50',
+            'phone_number' => 'required|unique:users|max:50',
+        ]);
+        $user = User::create($validated);
+        return view('users.show', compact('user'));
     }
 
     /**
@@ -48,8 +57,11 @@ class UserControler extends Controller
      */
     public function show($id)
     {
-        $users=User::findOrFail();
-        return view ('users.show', compact('user'));
+         $user = User::with(['role'])
+            ->findOrFail($id);
+        
+        return view('users.show', compact('user'));
+        
     }
 
     /**
@@ -60,7 +72,13 @@ class UserControler extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        $roles = Role::pluck('name', 'id');
+       
+
+        return view('users.edit',
+            compact('user', 'roles', 'countries')
     }
 
     /**
@@ -72,7 +90,18 @@ class UserControler extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'first_name' => 'required|max:50',
+            'last_name' => 'required|max:50',
+            'email' => 'required|max:255',
+            'role_id' => 'required'
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->fill($validated);
+        $user->save();
+
+        return redirect()->route('users.show', ['user' => $user->id]);
     }
 
     /**
@@ -83,6 +112,9 @@ class UserControler extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        User::destroy($id);
+
+        return redirect()->route('users.index');
     }
 }
