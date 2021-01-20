@@ -14,4 +14,9 @@ class Address extends Model
         'street_name', 'apartment_number', 'country'
         ];
 
+
+    public function users() { return $this->hasMany(User::class); }
+
+    public function companies() { return $this->hasMany(Company::class); }
+
 }

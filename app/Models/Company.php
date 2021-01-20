@@ -12,4 +12,9 @@ class Company extends Model
     protected $fillable = [
         'name', 'OIB'
         ];
+
+    public function users() { return $this->hasMany(User::class); }
+
+
+    public function address() { return $this->belongsTo(Address::class); }
 }

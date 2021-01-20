@@ -12,4 +12,6 @@ class Device extends Model
     protected $fillable = [
         'type', 'description', 'serial_number'
         ];
+
+    public function contract() { return $this->belongsTo(Contract::class); }
 }

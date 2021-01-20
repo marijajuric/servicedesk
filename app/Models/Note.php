@@ -12,4 +12,7 @@ class Note extends Model
     protected $fillable = [
         'title', 'description'
         ];
+
+
+    public function ticket() { return $this->belongsTo(Ticket::class); }
 }

@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -25,8 +25,21 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password'
     ];
+
+    public function role() { return $this->belongsTo(Role::class); }
+
+    public function group() { return $this->belongsTo(Group::class); }
+
+    public function company() { return $this->belongsTo(Company::class); }
+
+    public function address() { return $this->belongsTo(Address::class); }
+
+
+    public function contracts() { return $this->hasMany(Contract::class); }
+    public function tickets() { return $this->hasMany(Ticket::class); }
+
 
     /**
      * The attributes that should be cast to native types.
