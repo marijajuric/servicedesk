@@ -29,11 +29,8 @@ class User extends Authenticatable
     ];
 
     public function role() { return $this->belongsTo(Role::class); }
-
     public function group() { return $this->belongsTo(Group::class); }
-
     public function company() { return $this->belongsTo(Company::class); }
-
     public function address() { return $this->belongsTo(Address::class); }
 
 

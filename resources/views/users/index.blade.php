@@ -13,7 +13,7 @@
             <th scope="col">Email</th>
             <th scope="col">Password</th>
             <th scope="col">Phone number</th>
-
+            <th scope="col">Role</th>
             <th scope="col">Created at</th>
         </tr>
     </thead>
@@ -26,6 +26,7 @@
             <td>{{ $user->email}}</td>
             <td>{{ $user->password}}</td>
             <td>{{ $user->phone_number}}</td>
+            <td>{{ $user->role->name}}</td>
             <td>{{ $user->created_at}}</td>
             <td>
                 <a class="btn btn-outline-secondary" href="{{ route('users.show', ['user'=> $user->id])}}"> Details</a>
